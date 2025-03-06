@@ -31,15 +31,39 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"Your letter grade is: {letter}");
+       
+        string sign = "";
+        
+        int last_digit = grades % 10;
+
+        if (last_digit >= 7)
+        {
+            sign = "+";
+        }
+        else if (last_digit < 3)
+        {
+            sign ="-";
+        }
+
+        if (grades >= 93)
+        {
+            sign = "";
+        }
+
+        if (letter == "F")
+        {
+            sign = "";
+        }
+        Console.WriteLine($"Your letter garede is :{letter}{sign}.");
 
         if (grades >= 70)
         {
-            Console.WriteLine("You passed!");
+            Console.WriteLine("Congratulations! You passed the class!");
         }
         else
         {
-            Console.WriteLine("Better luck next time!");
+            Console.WriteLine("Stay Focused and you'll get it next time!");
         }
+
     }
 }
