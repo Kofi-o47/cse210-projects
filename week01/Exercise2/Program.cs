@@ -8,6 +8,7 @@ class Program
         string grade = Console.ReadLine();
         int grades = int.Parse(grade);
 
+        // percentages and their repective grades 
         string letter = "";
 
         if ( grades >= 90 )
@@ -31,7 +32,7 @@ class Program
             letter = "F";
         }
 
-       
+       // sign for percentage grades with displays 
         string sign = "";
         
         int last_digit = grades % 10;
