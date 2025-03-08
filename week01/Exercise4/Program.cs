@@ -39,15 +39,20 @@ class Program
 
        Console.WriteLine($"The sum is: {sum}");
 
+        //average for user input
       double average = numbers.Average();
       Console.WriteLine($"The average is: {average}");
 
+       // largest number for user input 
       int largest = numbers.Max();
       Console.WriteLine($"The largest number is: {largest}");
 
+
+      // smallest positive number 
       int smallestPostiveNumber = numbers.Where(x => x > 0).Min();
       Console.WriteLine($"The smallest positive number is : {smallestPostiveNumber}");
 
+     // sorted list 
       Console.WriteLine("The sorted list is:");
       numbers.Sort();
       foreach (int number in numbers)
