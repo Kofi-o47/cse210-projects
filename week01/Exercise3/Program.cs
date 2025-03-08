@@ -5,17 +5,19 @@ class Program
     static void Main(string[] args)
     {
         
-        
+        // random number generator 
         Random randomGenerator = new Random();
         int magic_number = randomGenerator.Next(1,101);
 
+        // while loop to keep playing 
         string keep_playing = "Yes";
 
         while(keep_playing =="Yes")
         {
         int guess = -1;
         int guess_count = 0;
-        
+             
+             // while loop to guess number with display
             while(guess != magic_number)
             {
              Console.Write("What is your guess? ");
@@ -37,6 +39,7 @@ class Program
              }
 
             }
+         // display for stretch challenge    
         Console.WriteLine($"It took you {guess_count} guesses.");
         Console.Write("Would you like to play again (Yes / No)? ");
         keep_playing = Console.ReadLine();
